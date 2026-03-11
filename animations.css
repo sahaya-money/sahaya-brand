@@ -39,12 +39,28 @@
 
 /* ── Bloom — stroke-dashoffset cascade (threshold / speaking moments) ──
    Targets g > circle so only the petal/ring circles animate.
-   Uses pathLength="1" + strokeDasharray="1" normalized approach. */
+   Uses pathLength="1" + strokeDasharray="1" normalized approach.
+   One-directional draw: petals open and fade, they never close.
+   60s parent rotation adds organic rangoli-like unfurling. */
 @keyframes sahaya-bloom {
   0%   { stroke-dashoffset: 1; opacity: 0;    }
-  12%  { stroke-dashoffset: 0; opacity: 1;    }
-  65%  {                        opacity: 0.55; }
-  100% { stroke-dashoffset: 1; opacity: 0;    }
+  20%  { stroke-dashoffset: 0; opacity: 1;    }
+  65%  { stroke-dashoffset: 0; opacity: 0.55; }
+  100% { stroke-dashoffset: 0; opacity: 0;    }
+}
+
+@keyframes sahaya-bloom-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.sahaya-bloom {
+  animation: sahaya-bloom-rotate 60s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.sahaya-bloom g {
+  stroke-width: 0.9;
 }
 
 .sahaya-bloom g > circle:nth-child(1) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 0.0s; }
