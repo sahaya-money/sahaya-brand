@@ -40,14 +40,14 @@ Seed of Life — 7 equal circles (R=20) in a 100×100 viewBox:
 
 ```html
 <!-- Tokens -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-brand@1/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-money/sahaya-brand@main/tokens.css">
 <!-- Fonts -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-brand@1/fonts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-money/sahaya-brand@main/fonts.css">
 <!-- Animations -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-brand@1/animations.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-money/sahaya-brand@main/animations.css">
 
 <!-- SVG mark inline or as img -->
-<img src="https://cdn.jsdelivr.net/gh/sahaya-brand@1/assets/sahaya-mark.svg" width="56" height="56" alt="Sahaya">
+<img src="https://cdn.jsdelivr.net/gh/sahaya-money/sahaya-brand@main/assets/sahaya-mark.svg" width="56" height="56" alt="Sahaya">
 ```
 
 ### React app (local path or npm)

@@ -3,7 +3,7 @@
  * Canonical CSS custom properties — source of truth for all Sahaya surfaces.
  *
  * Usage (static sites):
- *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahinithil/sahaya-brand@1/tokens.css">
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahaya-money/sahaya-brand@main/tokens.css">
  *
  * Usage (npm):
  *   import '@sahaya/brand/tokens.css';
