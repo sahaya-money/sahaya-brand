@@ -1,0 +1,16 @@
+/**
+ * Sahaya Canonical Font Import
+ * Includes all scripts used across Sahaya products.
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahinithil/sahaya-brand@1/fonts.css">
+ *
+ * Or import directly in CSS/JS:
+ *   @import '@sahaya/brand/fonts.css';
+ */
+
+/* Preconnect hints — add these <link> tags before this stylesheet for faster loading */
+/* <link rel="preconnect" href="https://fonts.googleapis.com"> */
+/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Noto+Sans+Devanagari:wght@300;400;700&family=Noto+Sans+Bengali:wght@300;400;700&family=Noto+Sans+Tamil:wght@300;400;700&family=Noto+Sans+Telugu:wght@300;400;700&family=Noto+Sans+Kannada:wght@300;400;700&family=Noto+Sans+Malayalam:wght@300;400;700&family=Noto+Sans+Gujarati:wght@300;400;700&family=Noto+Sans+Gurmukhi:wght@300;400;700&family=Noto+Sans+Odia:wght@300;400;700&display=swap');

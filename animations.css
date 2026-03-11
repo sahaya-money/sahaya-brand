@@ -1,0 +1,107 @@
+/**
+ * Sahaya Mark Animations
+ * Canonical keyframes and utility classes for all Sahaya mark motion states.
+ *
+ * Motion states:
+ *   .sahaya-compass — 22s linear rotation (LLM thinking)
+ *   .sahaya-bloom   — stroke-dashoffset cascade across 7 petals (8.4s)
+ *   .sahaya-breath  — gentle 7s rotation swing (idle / ambient)
+ *
+ * Voice-specific states (applied to elements containing .vp-bloom-circles):
+ *   .vp-user    — ripple pulse outward from center (listening)
+ *   .vp-sahaya  — draw-in bloom per circle (speaking)
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahinithil/sahaya-brand@1/animations.css">
+ */
+
+/* ── Compass — continuous directional rotation (LLM thinking) ── */
+@keyframes sahaya-compass {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.sahaya-compass {
+  animation: sahaya-compass 22s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* ── Breath — gentle rotation swing (idle / ambient) ── */
+@keyframes sahaya-breath {
+  0%   { opacity: 0.30; transform: rotate(0deg);  }
+  35%  { opacity: 0.55; transform: rotate(12deg); }
+  70%  { opacity: 0.40; transform: rotate(-5deg); }
+  100% { opacity: 0.30; transform: rotate(0deg);  }
+}
+.sahaya-breath {
+  animation: sahaya-breath 7s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+/* ── Bloom — stroke-dashoffset cascade (threshold / speaking moments) ──
+   Targets g > circle so only the petal/ring circles animate.
+   Uses pathLength="1" + strokeDasharray="1" normalized approach. */
+@keyframes sahaya-bloom {
+  0%   { stroke-dashoffset: 1; opacity: 0;    }
+  12%  { stroke-dashoffset: 0; opacity: 1;    }
+  65%  {                        opacity: 0.55; }
+  100% { stroke-dashoffset: 1; opacity: 0;    }
+}
+
+.sahaya-bloom g > circle:nth-child(1) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 0.0s; }
+.sahaya-bloom g > circle:nth-child(2) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 0.9s; }
+.sahaya-bloom g > circle:nth-child(3) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 1.8s; }
+.sahaya-bloom g > circle:nth-child(4) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 2.7s; }
+.sahaya-bloom g > circle:nth-child(5) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 3.6s; }
+.sahaya-bloom g > circle:nth-child(6) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 4.5s; }
+.sahaya-bloom g > circle:nth-child(7) { animation: sahaya-bloom 8.4s ease-in-out infinite; animation-delay: 5.4s; }
+
+/* ── Voice: Listening (user speaking) — ripple outward ── */
+@keyframes sahaya-voice-pulse {
+  0%, 100% { opacity: 0.08; }
+  50%       { opacity: 0.60; }
+}
+
+/* ── Voice: Speaking (Sahaya speaking) — draw-in bloom ── */
+@keyframes sahaya-voice-bloom {
+  0%   { stroke-dashoffset: 126; opacity: 0;    }
+  14%  { stroke-dashoffset: 0;   opacity: 1;    }
+  70%  { stroke-dashoffset: 0;   opacity: 0.55; }
+  100% { stroke-dashoffset: 126; opacity: 0;    }
+}
+
+/* ── Profile pulse — saffron glow on update ── */
+@keyframes sahaya-profile-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 120, 32, 0); }
+  50%       { box-shadow: 0 0 16px 4px rgba(224, 120, 32, 0.3); }
+}
+.sahaya-profile-pulse {
+  animation: sahaya-profile-pulse 1.5s ease-in-out infinite;
+}
+
+/* ── Recording glow — vermillion pulse ── */
+@keyframes sahaya-recording {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(193, 53, 39, 0); }
+  50%       { box-shadow: 0 0 16px 6px rgba(193, 53, 39, 0.35); }
+}
+.sahaya-recording {
+  animation: sahaya-recording 1.5s ease-in-out infinite;
+}
+
+/* ── Skeleton shimmer — saffron-tinted opacity ── */
+@keyframes sahaya-skeleton {
+  0%, 100% { opacity: 0.10; }
+  50%       { opacity: 0.18; }
+}
+.sahaya-skeleton {
+  animation: sahaya-skeleton 2s ease-in-out infinite;
+  background-color: rgba(224, 120, 32, 0.12);
+}
+
+/* ── Voice dots — scale+opacity pulse (voice activity) ── */
+@keyframes sahaya-voice-dot {
+  0%, 100% { transform: scale(0.6); opacity: 0.35; }
+  50%       { transform: scale(1);   opacity: 1;    }
+}
+.sahaya-voice-dots span:nth-child(1) { animation: sahaya-voice-dot 1.2s ease-in-out infinite; animation-delay: 0.0s; }
+.sahaya-voice-dots span:nth-child(2) { animation: sahaya-voice-dot 1.2s ease-in-out infinite; animation-delay: 0.2s; }
+.sahaya-voice-dots span:nth-child(3) { animation: sahaya-voice-dot 1.2s ease-in-out infinite; animation-delay: 0.4s; }

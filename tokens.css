@@ -1,0 +1,27 @@
+/**
+ * Sahaya Brand Tokens
+ * Canonical CSS custom properties — source of truth for all Sahaya surfaces.
+ *
+ * Usage (static sites):
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sahinithil/sahaya-brand@1/tokens.css">
+ *
+ * Usage (npm):
+ *   import '@sahaya/brand/tokens.css';
+ */
+
+:root {
+  /* ── Palette ── */
+  --sahaya-indigo:     #13102B;
+  --sahaya-khadi:      #F4EDD8;
+  --sahaya-saffron:    #E07820;
+  --sahaya-smoke:      #6B6050;
+  --sahaya-copper:     #8B5A34;
+  --sahaya-vermillion: #C13527;
+  --sahaya-line:       rgba(224, 120, 32, 0.18);
+
+  /* ── Typography ── */
+  --sahaya-font-display:   'Playfair Display', serif;
+  --sahaya-font-mono:      'DM Mono', monospace;
+  --sahaya-font-sans:      'DM Sans', sans-serif;
+  --sahaya-font-devanagari:'Noto Sans Devanagari', sans-serif;
+}

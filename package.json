@@ -1,0 +1,19 @@
+{
+  "name": "@sahaya/brand",
+  "version": "1.0.0",
+  "description": "Sahaya canonical brand assets — tokens, fonts, animations, SVG mark, React component",
+  "main": "react/SahayaMark.tsx",
+  "files": [
+    "tokens.css",
+    "tokens.json",
+    "fonts.css",
+    "animations.css",
+    "assets/",
+    "react/"
+  ],
+  "keywords": ["sahaya", "brand", "design-system"],
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  }
+}
